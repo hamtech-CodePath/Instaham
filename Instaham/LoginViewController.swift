@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.passwordField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +25,10 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true);
+    }
+
     @IBAction func pressedLoginBtn(sender: AnyObject) {
         //check if user is in database
         if(usernameField.text != "" || passwordField.text != ""){
