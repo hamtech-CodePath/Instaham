@@ -32,7 +32,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![alt tag](https://raw.githubusercontent.com/hamtech-CodePath/Twitter/master/Instaham_demo.gif)
+![alt tag](https://raw.githubusercontent.com/hamtech-CodePath/Instaham/master/Instaham_demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
