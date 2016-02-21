@@ -11,6 +11,8 @@ import Parse
 
 class PostPictureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var commentTextField: UITextField!
+    
     @IBOutlet weak var tempPicture: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,9 @@ class PostPictureViewController: UIViewController, UINavigationControllerDelegat
             let imageFile = PFFile(name:"image.png", data:imageData!)
             
             let userPhoto = PFObject(className:"Timeline")
+            if commentTextField.text != "" {
+                userPhoto["comment"] = commentTextField.text
+            }
             userPhoto["picture"] = imageFile
             userPhoto["username"] = PFUser.currentUser()?.username
             userPhoto["userId"] = PFUser.currentUser()?.objectId

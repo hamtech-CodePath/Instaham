@@ -63,6 +63,8 @@ class TimelineViewController: UIViewController, UICollectionViewDataSource, UICo
         let tempObj = timeline[indexPath.row]
         
         cell.label.text = tempObj["username"] as? String
+        if tempObj["comment"] != nil {
+        cell.comment.text = tempObj["comment"] as? String}
         
         let imageFile : PFFile = tempObj["picture"] as! PFFile
         imageFile.getDataInBackgroundWithBlock { (imageData:NSData?, error:NSError?)

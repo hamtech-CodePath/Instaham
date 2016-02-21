@@ -11,4 +11,5 @@ import UIKit
 class hexCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet var postPic: UIImageView!
     @IBOutlet var label: UILabel!
+    @IBOutlet weak var comment: UILabel!
 }
