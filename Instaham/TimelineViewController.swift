@@ -24,6 +24,12 @@ class TimelineViewController: UIViewController, UICollectionViewDataSource, UICo
         
         getPostFromParse() // query post
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        getPostFromParse()
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
